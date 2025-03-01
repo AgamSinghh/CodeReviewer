@@ -1,16 +1,19 @@
+
 import { useState, useEffect } from 'react'
 import "prismjs/themes/prism-tomorrow.css"
 import Editor from "react-simple-code-editor"
 import prism from "prismjs"
-import Markdown from "react-markdown" 
+import Markdown from "react-markdown"
 import rehypeHighlight from "rehype-highlight";
-// import "highlight.js/styles/github-dark.css";
-import axios from 'axios' 
+import "highlight.js/styles/github-dark.css";
+import axios from 'axios'
 import './App.css'
 
 function App() {
   const [ count, setCount ] = useState(0)
-  const [ code, setCode ] = useState( `Enter Your Code: `)
+  const [ code, setCode ] = useState(` function sum() {
+  return 1 + 1
+}`)
 
   const [ review, setReview ] = useState(``)
 
