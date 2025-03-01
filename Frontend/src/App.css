@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  background-color: #121212;
+  color: white;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  padding: 1.5rem;
+  display: flex;
+  gap: 1rem;
+}
+
+/* Left & Right Panels */
+main .left,
+main .right {
+  height: 100%;
+  flex-basis: 50%;
+  border-radius: 0.7rem;
+  overflow: hidden;
+  transition: flex-basis 0.3s ease-in-out;
+}
+
+/* Code Section */
+main .left {
+  background-color: #181818;
+  position: relative;
+  border: 2px solid rgba(0, 209, 255, 0.4);
+  box-shadow: 0 0 10px rgba(0, 209, 255, 0.3);
+}
+
+/* Code Editor */
+.left .code,
+.code pre,
+.code pre code {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 1rem;
+  border-radius: 0.7rem;
+  background-color: #0c0c0c;
+  color: #fff;
+  font-size: 1.2rem;
+  font-family: "Courier New", monospace;
+}
+
+/* Review Button */
+main .left .review {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  background: linear-gradient(45deg, #00D1FF, #A970FF);
+  color: white;
+  padding: 0.7rem 2.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 0.7rem;
+  border: none;
+  outline: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+main .left .review:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0, 209, 255, 0.7);
+}
+
+/* Right Panel (Review Section) */
+main .right {
+  background-color: #252525;
+  padding: 1.5rem;
+  font-size: 1.3rem;
+  overflow: auto;
+  border: 2px solid rgba(169, 112, 255, 0.4);
+  box-shadow: 0 0 10px rgba(169, 112, 255, 0.3);
+}
+
+/* Syntax Highlighting Colors (For Prism.js or Highlight.js) */
+.code pre {
+  margin: 0;
+  padding: 1rem;
+  overflow: auto;
+  border-radius: 0.7rem;
+}
+
+.code pre code {
+  color: #ffffff;
+  /* Makes the text clearly visible */
+}
+
+/* Draggable Resizing */
+.resizer {
+  width: 8px;
+  background-color: #555;
+  cursor: ew-resize;
+  transition: background 0.3s ease;
+}
+
+.resizer:hover {
+  background-color: #00D1FF;
+}

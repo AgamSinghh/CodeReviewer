@@ -1,0 +1,37 @@
+# Node.js (Backend)
+Backend/node_modules/
+Backend/.env
+Backend/package-lock.json
+Backend/npm-debug.log
+Backend/yarn-debug.log
+Backend/yarn-error.log
+
+# Logs
+Backend/logs/
+Backend/*.log
+Backend/npm-debug.log*
+Backend/yarn-debug.log*
+Backend/pm2.log
+Backend/debug.log
+
+# Build files
+Backend/dist/
+Backend/.turbo/
+
+# Vite/React (Frontend)
+Frontend/node_modules/
+Frontend/dist/
+Frontend/.vite/
+Frontend/.vitepress/cache/
+
+# Config and cache files
+Frontend/.DS_Store
+Frontend/.vscode/
+Frontend/.idea/
+Frontend/*.swp
+Frontend/eslint.config.js
+
+# Editor/OS files
+*.bak
+*.tmp
+Thumbs.db
